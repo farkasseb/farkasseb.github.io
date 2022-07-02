@@ -4,6 +4,10 @@ title: "How to add epub to SuperMemo"
 tags: macOS SuperMemo epub
 ---
 
+## Update 2022.07.02.
+
+I've updated the article by no longer recommending split and spread as the last step, mainly because I couldn't always keep up with the schedule thus the order of the splits changed which resulted in me seeing subsequent chapters without first having a chance to process the preceding ones. I'm sure these scheduling problems are fixable but I'm not sure how to do it quickly and easily. So my recommendation is NOT to split and spread books just read them incrementally as a whole.
+
 ## Intro
 
 I'm a rather quick learner. However, I've been struggling with actually remembering the material for a longer period. Recently I've found [Anki](https://apps.ankiweb.net) and [SuperMemo](https://super-memo.com). Both applications are wonderful, but ultimately I've chosen SuperMemo, mainly because of its Incremental Reading feature. I'm still very early in my journey to learn using it proficiently. (SuperMemo is a Windows-only software that I'm using with [Parallels Desktop for Mac](https://www.parallels.com/eu/products/desktop/))
@@ -18,7 +22,7 @@ I'm planning to read a lot of books with [incremental reading](https://help.supe
 4. Clean up `html` and optimize images
 5. Import to SuperMemo
 6. Fix images, set up references
-7. Split & Spread
+7. Adjust priority
 
 ## Have a DRM free `.epub`
 
@@ -84,13 +88,19 @@ file:///C:/SuperMemo/systems/Images/Books/Apple-TheSwift55ProgrammingLanguage/
 
 > Parallels Desktop for Mac is amazing, somehow it integrates the Mac apps into Windows's interface. **I could set Visual Studio Code (Mac) as a [default app for `.HTM` file extension](https://support.microsoft.com/en-us/windows/change-default-programs-in-windows-10-e5d82cad-17d1-c53b-3505-f10a32e1894d) on Windows!**
 
+## Adjust priority
+
+After fixing up everything one last step remains. Adjusting the book's [priority](https://help.supermemo.org/wiki/Glossary:Priority). It's done by pressing `Alt + P` then specifying either a percentage or a position. Please note that position `1` equals to `0%` that is `0%` means this topic is top priority.
+
 ## Split & Spread
 
-The final step is to **split** the book up and schedule it for later review. I've mostly followed [Pleasurable Learning SuperMemo's great step-by-step video](https://www.youtube.com/watch?v=whRhtXMlaaM) to do this.
+The only case where I had to do splitting, either way, was when the imported book was so massively big that it caused performance issues with SuperMemo and the UI became unresponsive for a long time every time the book was being opened.
+
+I've mostly followed [Pleasurable Learning SuperMemo's great step-by-step video](https://www.youtube.com/watch?v=whRhtXMlaaM) to do this.
 
 One of the most useful tricks I've learned is to NOT to use SuperMemo's default splitting as it messes up the topics a little. Instead specify a custom tag, that's usually `<h1>, <h2>, <h3>, <h4>` with `epub`s converted to `html`.
 
-Splitting up this way is a little cumbersome, but doable in a relatively short time. After the split, we can **spread** the material according to our schedule. I'm still figuring out how to do this last step effectively.
+Splitting up this way is a little cumbersome, but doable in a relatively short time. After the split, we can **spread** the material according to our schedule.
 
 ## References
 
@@ -103,3 +113,4 @@ Splitting up this way is a little cumbersome, but doable in a relatively short t
 - [Change default programs in Windows 10](https://support.microsoft.com/en-us/windows/change-default-programs-in-windows-10-e5d82cad-17d1-c53b-3505-f10a32e1894d)
 - [Calibre](https://calibre-ebook.com)
 - [Image Optim](https://imageoptim.com/mac)
+- [SuperMemo Help Glossary:Priority](https://help.supermemo.org/wiki/Glossary:Priority)
