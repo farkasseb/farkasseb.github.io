@@ -22,7 +22,7 @@ _I am not affiliated with any of the apps or programs that I may mention or reco
 4. `rbenv` and `pyenv`
 5. `powerline-shell`
 6. Enable Touch ID for `sudo`
-7. 1Password CLI
+7. `1Password CLI`
 
 ## Homebrew
 
@@ -42,7 +42,7 @@ Configuring the basic behaviours of iTerm2 is pretty straightforward as it alrea
 
 Colours are always a question of personal preference. My favourite one so far is the **Solarized Dark** as it's easy on my eyes. If you don't like dark colours consider using **Solarized Light**. Experiment with the other presets as well.
 
-Go to `Settings (Cmd + ,)` -> `Profiles` -> `Default` -> `Colors` -> **`Color Presets...`** -> `Solarized Dark`
+Go to `Settings (Cmd + ,)` -> `Profiles` -> `Default` -> `Colors` -> **`Color Presets...`** -> **`Solarized Dark`**
 
 You can find a lot more in the [Online Gallery](https://iterm2colorschemes.com/).
 
@@ -70,7 +70,7 @@ Alright, but what is **zsh**?
 
 > ZSH, also called the Z shell, is an extended version of the Bourne Shell (sh), with plenty of new features, and support for plugins and themes. [Source](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/)
 
-Makes sense, except what is a shell?
+Makes sense, except what is a **shell**?
 
 > A shell is a software program used to interpret commands that are input via a command-line interface, enabling users to interact with a computer by giving it instructions. [Source](https://www.computerhope.com/jargon/s/shell.htm)
 
@@ -80,15 +80,9 @@ Apple has already replaced the default shell from bash to **zsh** in macOS Catal
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-After the successful installation, we can start customizing it by editing our `~/.zshrc` file. The contents of this file are executed every time we create a new session. This is my main config. (Will be extended in the upcoming steps.)
+After the successful installation, we can start customizing it by editing our `~/.zshrc` file. The contents of this file are executed every time we create a new session.
 
-First, we can set up our theme. If you don't like this one, there is [a lot more to choose from](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes).
-
-The next two lines just make sure that our Oh My Zsh is automatically updated every day.
-
-Following that we can customize the plugins we use. There is a [myriad of available plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins), but in my experience, a large portion of them just adds _aliases_ that are pretty hard to remember when I can simply memorize the actual command itself. No need for indirections. For example, the `brew` plugin creates an _alias_ `bubc` for `brew upgrade && brew cleanup`. Which one seems easier to remember? For me, it's usually the latter. Don't get me wrong, these aliases can be useful, using the `bundler` plugin saved me a lot of time. Instead of writing manually `bundle install` 50+ times a day, I just say `bi` and we are ready to go. Experiment with what works for you.
-
-The last two lines set up the language environment and the preferred editor. If you are not familiar with the basics of `vim` I suggest choosing something else, like `nano`.
+This is my main config. (Will be extended in the upcoming steps.)
 
 ```
 ZSH_THEME="robbyrussell"
@@ -101,6 +95,17 @@ plugins=(bundler git macos xcode)
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 ```
+
+First, we can set up our theme. If you don't like this one, there is [a lot more to choose from](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes).
+
+The next two lines just make sure that our Oh My Zsh is automatically updated every day.
+
+Following that we can customize the plugins we use. There is a [myriad of available plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins), but in my experience, a large portion of them just adds _aliases_ that are pretty hard to remember when I can simply memorize the actual command itself. No need for indirections. For example, the `brew` plugin creates an _alias_ `bubc` for `brew upgrade && brew cleanup`. Which one seems easier to remember? For me, it's usually the latter. Don't get me wrong, these aliases can be useful, using the `bundler` plugin saved me a lot of time. Instead of writing manually `bundle install` 50+ times a day, I just say `bi` and we are ready to go. Experiment with what works for you.
+
+What's an **alias**?
+The alias command lets us create shortcuts for commands that we may need to enter frequently, making them easier to remember and use.
+
+The last two lines set up the language environment and the preferred editor. If you are not familiar with the basics of `vim` I suggest choosing something else, like `nano`.
 
 ## rbenv and pyenv
 
@@ -227,9 +232,9 @@ Save the file and close it. Open a new session (after typing in your password yo
 
 ## 1Password CLI
 
-I love [1Password](https://1password.com/). It really feels like I'm using a first-party application. Recently they've come up with something even more amazing: the [**1Password CLI**](https://developer.1password.com/docs/cli). There are tons of possibilities with it, I'm still playing with it but it's already useful for a bunch of things. Let me show you some.
+I love [`1Password`](https://1password.com/). It really feels like I'm using a first-party application. Recently they've come up with something even more amazing: the [**`1Password CLI`**](https://developer.1password.com/docs/cli). There are tons of possibilities with it, I'm still playing with it but it's already useful for a bunch of things. Let me show you some.
 
-If you have a 1Password subscription and the app is installed already, you can install the 1Password CLI via brew:
+If you have a `1Password` subscription and the app is installed already, you can install the `1Password CLI` via brew:
 
 ```sh
 brew install --cask 1password/tap/1password-cli
@@ -274,13 +279,13 @@ Note: running this command prompts for your Touch ID.
 
 ### Authenticate with SSH automatically
 
-I have a lot of [SSH keys](https://www.ssh.com/academy/ssh-keys), usually using a different one for each and every Git provider and client we are working for. Managing these, especially if you have multiple Bitbucket accounts for example can be a pain. Writing complex ssh configurations. 1Password CLI comes to our rescue here as well.
-First, we can store our SSH keys in 1Password vaults, which is already better than the default `~/.ssh` directory. The real kicker, however, is that we can automatically authenticate with our Touch ID when we perform `git` commands. It's like magic. 🎉
+I have a lot of [SSH keys](https://www.ssh.com/academy/ssh-keys), usually using a different one for each and every Git provider and client we are working for. Managing these, especially if you have multiple Bitbucket accounts for example can be a pain. Writing complex ssh configurations. `1Password CLI` comes to our rescue here as well.
+First, we can store our SSH keys in `1Password` **vaults**, which is already better than the default `~/.ssh` directory. The real kicker, however, is that we can automatically authenticate with our Touch ID when we perform `git` commands. It's like magic. 🎉
 
 To set this up follow the [guide](https://developer.1password.com/docs/ssh). The main steps are:
 
 - Turning on `Settings` -> `Developer` -> **`Use the SSH agent`**
-- Add the proper config to your SSH config (`~/.ssh/config`). 1Password settings will show it.
+- Add the proper config to your SSH config (`~/.ssh/config`). `1Password` settings will show it.
 
 ```sh
 Host *
